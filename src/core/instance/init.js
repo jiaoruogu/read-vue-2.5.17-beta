@@ -26,7 +26,7 @@ export function initMixin (Vue: Class<Component>) {
       mark(startTag)
     }
 
-    // a flag to avoid this being observed
+    // a flag to avoid this being observed  避免被观察到的标志
     vm._isVue = true
     // merge options
     if (options && options._isComponent) {
@@ -50,9 +50,9 @@ export function initMixin (Vue: Class<Component>) {
     }
     // expose real self
     vm._self = vm
-    initLifecycle(vm)
-    initEvents(vm)
-    initRender(vm)
+    initLifecycle(vm) // 初始化生命周期
+    initEvents(vm)  //  初始化事件中心
+    initRender(vm)  // 初始化渲染
     callHook(vm, 'beforeCreate')
     initInjections(vm) // resolve injections before data/props
     initState(vm)
