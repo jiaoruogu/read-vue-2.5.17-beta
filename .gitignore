@@ -18,4 +18,3 @@ packages/vue-server-renderer/client-plugin.js
 packages/vue-template-compiler/build.js
 .vscode
 .idea
-tempary.js

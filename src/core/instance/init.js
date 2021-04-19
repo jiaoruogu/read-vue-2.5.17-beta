@@ -36,6 +36,7 @@ export function initMixin (Vue: Class<Component>) {
       //优化内部组件实例化，因为动态选项合并非常慢，并且没有内部组件选项需要特殊处理。
       initInternalComponent(vm, options)
     } else {
+      // 合并配置
       vm.$options = mergeOptions(
         resolveConstructorOptions(vm.constructor),
         options || {},

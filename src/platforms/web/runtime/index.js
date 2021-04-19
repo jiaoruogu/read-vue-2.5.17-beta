@@ -38,6 +38,9 @@ Vue.prototype.$mount = function (
   el?: string | Element,
   hydrating?: boolean
 ): Component {
+
+  // 先判断存在并且环境在浏览器中调用query方法
+  // 先走 逻辑与 然后再判断三元操作符
   el = el && inBrowser ? query(el) : undefined
   return mountComponent(this, el, hydrating)
 }
